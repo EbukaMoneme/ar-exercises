@@ -13,7 +13,5 @@ puts "----------"
 puts "Input a store name: "
 input = gets.chomp
 
-error_store = Store.create(name: input)
-puts "Valid Store? #{error_store.valid?} "
 puts "--- Errors ---"
-puts error_store.errors.full_messages
+puts Store.create(name: input).errors.full_messages
